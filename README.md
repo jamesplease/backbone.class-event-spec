@@ -43,7 +43,7 @@ separation mechanisms, such as hyphenating and camelcase.
 'show:my:view';
 ```
 
-##### The Action
+##### Action
 
 The action is always present tense. The action should be a simple verb that describes the event
 that just happened.
@@ -56,7 +56,7 @@ that just happened.
 'render:view';
 ```
 
-##### The Subject
+##### Subject
 
 If the action is acting on a particular thing, then you may pass along the subject, separated from the
 action by a colon. Keep in mind that the subject is always optional. An event may have at most
@@ -72,7 +72,27 @@ to separate out the pieces.
 
 It is suggested that you avoid composite nouns if possible.
 
-### Anatomy of a Class Event
+### Class Events
+
+#### Anatomy of a TriggerMethod
+
+Every Class Event is wrapped by two triggerMethod calls: one before the event and one afterward. TriggerMethod
+triggers the event on the class' event bus while also executing a function for that event. So, for instance, 
+
+TriggerMethod events differs slightly from Backbone events. They have the following form:
+
+`adverb:verb:subject`
+
+##### Adverb
+
+The adverb is either `before` or nothing at all.
+
+#### Synchronous/Asynchronous
+
+Trigger Methods events are asynchronous. This means that asynchronous methods in the `onBefore` callback will
+not be necessarily be executed before the event itself occurs.
+
+#### Anatomy of a Class Event
 
 A class event has three components.
 
@@ -80,13 +100,7 @@ A class event has three components.
 2. The event itself
 2. An after triggerMethod event
 
-TriggerMethod events differs slightly from Backbone events. They have the following form:
-
-`adverb:verb:subject`
-
-Where the adverb is either `before` or nothing at all.
-
-#### The Before TriggerMethod
+##### The Before TriggerMethod
 
 The before event callback has the following form
 
@@ -96,11 +110,11 @@ This causes the following method to be triggered:
 
 `onBeforeActionSubject`
 
-#### The Event Itself
+##### The Event Itself
 
 The event itself is whatever action is being completed. This takes place in-between the trigger method calls.
 
-#### The After TriggerMethod
+##### The After TriggerMethod
 
 The after event callback has the same form as a Backbone event.
 
@@ -109,8 +123,3 @@ The after event callback has the same form as a Backbone event.
 This causes the following method to be triggered:
 
 `onActionSubject`
-
-### Synchronous/Asynchronous
-
-Trigger Methods events are asynchronous. This means that asynchronous methods in the `onBefore` callback will
-not be necessarily be executed before the event itself occurs.
