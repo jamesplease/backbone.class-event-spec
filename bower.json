@@ -1,0 +1,25 @@
+{
+  "name": "trigger-method-specs",
+  "version": "0.1.0",
+  "homepage": "https://github.com/jmeas/trigger-method-specs",
+  "authors": [
+    "Jmeas <jellyes2@gmail.com>"
+  ],
+  "description": "The specifications for the Trigger Method API.",
+  "main": "README.md",
+  "keywords": [
+    "marionette",
+    "trigger",
+    "method",
+    "backbone",
+    "events"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

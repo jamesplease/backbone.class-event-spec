@@ -1,0 +1,26 @@
+{
+  "name": "trigger-method-specs",
+  "version": "0.1.0",
+  "description": "The specifications for the Trigger Method API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jmeas/trigger-method-specs.git"
+  },
+  "keywords": [
+    "marionette",
+    "trigger",
+    "method",
+    "backbone",
+    "events"
+  ],
+  "author": "Jmeas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jmeas/trigger-method-specs/issues"
+  },
+  "homepage": "https://github.com/jmeas/trigger-method-specs"
+}
