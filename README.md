@@ -29,6 +29,19 @@ Events in the Backbone universe follow the following format:
 
 `action:subject`
 
+##### Action
+
+The action is always present tense. The action should be a simple verb that describes the event
+that just happened.
+
+```js
+// Bad Backbone event name
+'rendered:view';
+
+// Good Backbone event name
+'render:view';
+```
+
 ##### The Separator
 
 The separator in events is a colon, `:`. The colon should be used instead of other
@@ -43,22 +56,9 @@ separation mechanisms, such as hyphenating and camelcase.
 'show:my:view';
 ```
 
-##### Action
-
-The action is always present tense. The action should be a simple verb that describes the event
-that just happened.
-
-```js
-// Bad Backbone event name
-'rendered:view';
-
-// Good Backbone event name
-'render:view';
-```
-
 ##### Subject
 
-If the action is acting on a particular thing, then you may pass along the subject, separated from the
+If the action is acting on a particular thing, then you may pass along the subject which is separated from the
 action by a colon. Keep in mind that the subject is always optional. An event may have at most
 a single subject.
 
